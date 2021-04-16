@@ -1,10 +1,10 @@
 //Import reset.scss
-@import './modules/reset.scss';
+@import './modules/reset';
 //Import vars
-@import './modules/vars.scss';
+@import './modules/vars';
 //import layout
-@import './modules/layout.scss';
+@import './layout.scss';
 //import typography
 @import './modules/typography.scss';
 //Import Mixims
-@import './modules/mixims';
+@import './modules/mixins';
