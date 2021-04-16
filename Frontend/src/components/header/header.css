@@ -1,0 +1,16 @@
+@import '../../index.css';
+
+.header-v1 {
+	height: 71px;
+	background-color: #c4c4c4;
+	@apply flex items-center justify-between px-4;
+}
+.header-v1__menu-image {
+	z-index: 40;
+	outline: none;
+	position: relative;
+	@apply h-9;
+}
+.header-v1__menu-shopping-image {
+	@apply h-9;
+}
