@@ -1,20 +1,21 @@
-.carruselgrid {
+@import '../../scss/App.scss';
+.carouselgrid {
 	margin: 30px 0;
 	overflow: hidden;
 }
-.carruselgrid__title {
+.carouselgrid__title {
 	text-align: center;
 	font-size: 19px;
 	margin-bottom: 10px;
 }
-.carruselgrid__slideshow {
+.carouselgrid__slideshow {
 	position: relative;
 }
-.carruselgrid__slideshow-slide {
+.carouselgrid__slideshow-slide {
 	display: flex;
 	min-width: 100%;
 }
-.carruselgrid__slideshow-controls {
+.carouselgrid__slideshow-controls {
 	display: flex;
 	position: absolute;
 	pointer-events: none;
@@ -24,16 +25,15 @@
 	top: 0;
 }
 
-.carruselgrid__slideshow-controls-arrow {
+.carouselgrid__slideshow-controls-arrow {
 	pointer-events: all;
 	width: 2rem;
 	display: inline-block;
 	outline: none;
 	color: rgba(0, 0, 0, 0.4);
+	border: none;
+	background-color: transparent;
 }
 .left {
 	visibility: hidden;
-}
-.card-contenido {
-	margin: 5px 10px;
 }

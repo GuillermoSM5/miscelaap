@@ -1,10 +1,10 @@
 import React from 'react';
-import './CardProducto.css';
+import './CardProducto.scss';
 
 const CardProducto = ({ numero, card }) => {
 	return (
 		<section>
-			<div className="card-contenido"> {`${card} ${numero}`}</div>
+			<div className='card-content'> {`${card} ${numero}`}</div>
 		</section>
 	);
 };

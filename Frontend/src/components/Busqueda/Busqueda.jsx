@@ -1,18 +1,18 @@
 import React from 'react';
-import './Busqueda.css';
-import { ReactComponent as Search } from './assets/Search.svg';
+import './Busqueda.scss';
+import { ReactComponent as Search } from '../../assets/Search.svg';
 
 const Busqueda = () => {
 	return (
 		<section>
-			<form className="busqueda--form">
-				<a href="https://www.google.com" className="busqueda--form-img">
+			<form className='search--form'>
+				<a href='https://www.google.com' className='search--form-img'>
 					<Search />
 				</a>
 				<input
-					className="busqueda--form-input"
-					type="search"
-					placeholder="Buscar..."
+					className='search--form-input'
+					type='search'
+					placeholder='Buscar...'
 				/>
 			</form>
 		</section>

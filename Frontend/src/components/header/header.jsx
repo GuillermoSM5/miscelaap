@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './header.css';
-import MenuH from './menu.svg';
-import Shopping from './shopping.svg';
-import MenuDeslizable from '../Menu/Menu';
-import Close from './Close.svg';
+import './Header.scss';
+import MenuH from '../../assets/Menu.svg';
+import Shopping from '../../assets/Shopping.svg';
+import SlideMenu from '../Menu/Menu';
+import Close from '../../assets/Close.svg';
 
 const Header = () => {
 	const [menuMain, setMenuMain] = useState(false);
@@ -12,25 +12,25 @@ const Header = () => {
 	};
 	return (
 		<>
-			<header className="header-v1">
-				<button className="header-v1__menu" href="/">
+			<header className='header-v1'>
+				<button className='header-v1__menu' href='/'>
 					<img
 						onClick={menu}
-						className="header-v1__menu-image"
+						className='header-v1__menu-image'
 						src={menuMain ? Close : MenuH}
-						alt="Menu"
+						alt='Menu'
 					/>
 				</button>
 				{menuMain && (
-					<div className="menuMain">
-						<MenuDeslizable />
+					<div className='menuMain'>
+						<SlideMenu />
 					</div>
 				)}
-				<a className="header-v1__menu-shopping" href="/">
+				<a className='header-v1__menu-shopping' href='/'>
 					<img
-						className="header-v1__menu-shopping-image"
+						className='header-v1__menu-shopping-image'
 						src={Shopping}
-						alt=""
+						alt=''
 					/>
 				</a>
 			</header>

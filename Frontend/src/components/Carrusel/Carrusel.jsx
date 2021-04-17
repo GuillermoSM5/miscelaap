@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import './Carrusel.css';
+import './Carrusel.scss';
 import { ReactComponent as Left } from '../../assets/left.svg';
 import { ReactComponent as Rigth } from '../../assets/rigth.svg';
 
@@ -9,7 +9,7 @@ const Carrusel = () => {
 	const leftButton = useRef(null);
 	const rigthButton = useRef(null);
 
-	const siguiente = () => {
+	const next = () => {
 		if (slideshow.current.children.length > 0) {
 			const primerElemento = slideshow.current.children[0];
 			slideshow.current.style.transition = `600ms ease-out all`;
@@ -28,7 +28,7 @@ const Carrusel = () => {
 		}
 	};
 
-	const anterior = () => {
+	const previous = () => {
 		if (slideshow.current.children.length > 0) {
 			const index = slideshow.current.children.length - 1;
 			const ultimoElemento = slideshow.current.children[index];
@@ -50,7 +50,7 @@ const Carrusel = () => {
 
 	useEffect(() => {
 		intervaloSlideshow.current = setInterval(() => {
-			siguiente();
+			next();
 		}, 5000);
 
 		leftButton.current.addEventListener('click', () => {
@@ -58,7 +58,7 @@ const Carrusel = () => {
 			clearInterval(intervaloSlideshow.current);
 			console.log('iniciando contador');
 			intervaloSlideshow.current = setInterval(() => {
-				siguiente();
+				next();
 			}, 5000);
 		});
 
@@ -67,7 +67,7 @@ const Carrusel = () => {
 			clearInterval(intervaloSlideshow.current);
 			console.log('iniciando contador');
 			intervaloSlideshow.current = setInterval(() => {
-				siguiente();
+				next();
 			}, 5000);
 		});
 
@@ -77,49 +77,49 @@ const Carrusel = () => {
 
 		slideshow.current.addEventListener('mouseleave', () => {
 			intervaloSlideshow.current = setInterval(() => {
-				siguiente();
+				next();
 			}, 5000);
 		});
 	}, []);
 
 	return (
-		<div className="carrusel">
-			<div className="carrusel-slideshow" ref={slideshow}>
-				<div className="carrusel-slideshow__slide">
-					<a href="https://www.google.com/">
+		<div className='carrusel'>
+			<div className='carrusel-slideshow' ref={slideshow}>
+				<div className='carrusel-slideshow__slide'>
+					<a href='https://www.google.com/'>
 						<img
-							className="carrusel-slideshow__slide-image"
-							src="https://oxxo-com.s3.amazonaws.com/carousel/promociones/cc56b26a5a89d8fc505bec05e2baf8c4.jpg"
-							alt=""
+							className='carrusel-slideshow__slide-image'
+							src='https://oxxo-com.s3.amazonaws.com/carousel/promociones/cc56b26a5a89d8fc505bec05e2baf8c4.jpg'
+							alt=''
 						/>
 					</a>
 				</div>
-				<div className="carrusel-slideshow__slide">
-					<a href="https://www.google.com/">
+				<div className='carrusel-slideshow__slide'>
+					<a href='https://www.google.com/'>
 						<img
-							className="carrusel-slideshow__slide-image"
-							src="https://oxxo-com.s3.amazonaws.com/carousel/promociones/d12e28768364406ebcdadcdabc453a37.jpg"
-							alt=""
+							className='carrusel-slideshow__slide-image'
+							src='https://oxxo-com.s3.amazonaws.com/carousel/promociones/d12e28768364406ebcdadcdabc453a37.jpg'
+							alt=''
 						/>
 					</a>
 				</div>
-				<div className="carrusel-slideshow__slide">
-					<a href="https://www.google.com/">
+				<div className='carrusel-slideshow__slide'>
+					<a href='https://www.google.com/'>
 						<img
-							className="carrusel-slideshow__slide-image"
-							src="https://oxxo-com.s3.amazonaws.com/carousel/promociones/195e9fd0047ed5f6132011b445a9f4af.png"
-							alt=""
+							className='carrusel-slideshow__slide-image'
+							src='https://oxxo-com.s3.amazonaws.com/carousel/promociones/195e9fd0047ed5f6132011b445a9f4af.png'
+							alt=''
 						/>
 					</a>
 				</div>
 			</div>
-			<div className="carrusel-controls">
-				<button onClick={anterior} className="carrusel__arrow" ref={leftButton}>
+			<div className='carrusel-controls'>
+				<button onClick={previous} className='carrusel__arrow' ref={leftButton}>
 					<Left />
 				</button>
 				<button
-					onClick={siguiente}
-					className="carrusel__arrow rigth"
+					onClick={next}
+					className='carrusel__arrow rigth'
 					ref={rigthButton}
 				>
 					<Rigth />
