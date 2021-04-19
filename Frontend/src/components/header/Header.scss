@@ -1,0 +1,22 @@
+@import '../../scss/App.scss';
+.header-v1 {
+	height: 71px;
+	background-color: #c4c4c4;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 4px;
+	.header-v1__menu {
+		border: none;
+		background-color: #c4c4c4;
+	}
+	.header-v1__menu-image {
+		z-index: 40;
+		outline: none;
+		position: relative;
+		height: 2.25rem;
+	}
+	.header-v1__menu-shopping-image {
+		height: 2.25rem;
+	}
+}

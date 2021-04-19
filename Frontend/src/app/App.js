@@ -1,11 +1,21 @@
 import React from 'react';
-import '../scss/App.scss';
+import Layout from '../components/Layout/Layout';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from '../pages/Home.jsx';
+import SignUp from '../pages/Signup';
+import Login from '../pages/Login';
 
 function App() {
 	return (
-		<div className="App">
-			<h1>Hola Mundo</h1>
-		</div>
+		<Router>
+			<Layout>
+				<Switch>
+					<Route exact path='/' component={Home} />
+					<Route path='/log-in' component={Login} />
+					<Route path='/sign-up' component={SignUp} />
+				</Switch>
+			</Layout>
+		</Router>
 	);
 }
 

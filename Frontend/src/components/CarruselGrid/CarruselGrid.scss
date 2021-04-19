@@ -1,0 +1,39 @@
+@import '../../scss/App.scss';
+.carouselgrid {
+	margin: 30px 0;
+	overflow: hidden;
+}
+.carouselgrid__title {
+	text-align: center;
+	font-size: 19px;
+	margin-bottom: 10px;
+}
+.carouselgrid__slideshow {
+	position: relative;
+}
+.carouselgrid__slideshow-slide {
+	display: flex;
+	min-width: 100%;
+}
+.carouselgrid__slideshow-controls {
+	display: flex;
+	position: absolute;
+	pointer-events: none;
+	height: 100%;
+	width: 100%;
+	justify-content: space-between;
+	top: 0;
+}
+
+.carouselgrid__slideshow-controls-arrow {
+	pointer-events: all;
+	width: 2rem;
+	display: inline-block;
+	outline: none;
+	color: rgba(0, 0, 0, 0.4);
+	border: none;
+	background-color: transparent;
+}
+.left {
+	visibility: hidden;
+}
