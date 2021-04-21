@@ -1,11 +1,11 @@
 @import '../../scss/App.scss';
 .header-v1 {
-	height: 71px;
+	height: 4.5rem;
 	background-color: #c4c4c4;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 4px;
+	padding: 0 0.25rem;
 	.header-v1__menu {
 		border: none;
 		background-color: #c4c4c4;
@@ -19,4 +19,40 @@
 	.header-v1__menu-shopping-image {
 		height: 2.25rem;
 	}
+}
+.nav-menu {
+	width: 50%;
+	position: fixed;
+	top: 0%;
+	height: 100vh;
+	z-index: 40;
+	background-color: #c4c4c4;
+	left: -100%;
+	transition: 1s;
+	.nav-menu__close {
+		height: 4.5rem;
+		display: flex;
+		align-items: center;
+		padding: 0 0.25rem;
+		.nav-menu__close-img {
+			height: 2.7rem;
+		}
+	}
+	.nav-menu__account-name {
+		display: flex;
+		align-items: center;
+		padding: 0 1.6rem;
+		img {
+			height: 2.5rem;
+			border-radius: 50%;
+		}
+		p {
+			padding-left: 20px;
+			font-size: 20px;
+		}
+	}
+}
+.menu-active {
+	left: 0;
+	transition: 1s;
 }

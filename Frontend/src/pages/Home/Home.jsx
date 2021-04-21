@@ -8,11 +8,11 @@ const Home = () => {
 		<>
 			<Carrusel />
 			<Busqueda />
-			<div className="saludo">
-				<h2 className="saludo-pregunta">¿Que te traigo de la tienda?</h2>
+			<div className='saludo'>
+				<h2 className='saludo-pregunta'>¿Que te traigo de la tienda?</h2>
 			</div>
-			<CarruselGrid titulo="Productos" card="prodcuto" />
-			<CarruselGrid titulo="Tiendas" card="tienda" />
+			<CarruselGrid titulo='Productos' card='prodcuto' />
+			<CarruselGrid titulo='Tiendas' card='tienda' />
 		</>
 	);
 };

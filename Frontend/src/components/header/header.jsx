@@ -2,30 +2,27 @@ import React, { useState } from 'react';
 import './Header.scss';
 import MenuH from '../../assets/Menu.svg';
 import Shopping from '../../assets/Shopping.svg';
-import SlideMenu from '../Menu/Menu';
+import { Link as div } from 'react-router-dom';
 import Close from '../../assets/Close.svg';
+import DefaulUser from '../../assets/default-user.png';
 
 const Header = () => {
-	const [menuMain, setMenuMain] = useState(false);
-	const menu = () => {
-		setMenuMain(!menuMain);
+	const [menuActive, setMenuActive] = useState(true);
+	const sideMenu = () => {
+		setMenuActive(!menuActive);
+		console.log(menuActive);
 	};
 	return (
 		<>
 			<header className='header-v1'>
 				<button className='header-v1__menu' href='/'>
 					<img
-						onClick={menu}
 						className='header-v1__menu-image'
-						src={menuMain ? Close : MenuH}
+						onClick={sideMenu}
+						src={MenuH}
 						alt='Menu'
 					/>
 				</button>
-				{menuMain && (
-					<div className='menuMain'>
-						<SlideMenu />
-					</div>
-				)}
 				<a className='header-v1__menu-shopping' href='/'>
 					<img
 						className='header-v1__menu-shopping-image'
@@ -34,6 +31,26 @@ const Header = () => {
 					/>
 				</a>
 			</header>
+			<nav className={menuActive ? 'nav-menu menu-active' : 'nav-menu'}>
+				<div className='nav-menu__close'>
+					<img
+						onClick={sideMenu}
+						className='nav-menu__close-img'
+						src={Close}
+						alt=''
+					/>
+				</div>
+				<div to='/log-in' className='nav-menu__account'>
+					<div className='nav-menu__account-name'>
+						<img src={DefaulUser} alt='' />
+						<p>Mi cuenta</p>
+					</div>
+				</div>
+				<div>Novedades</div>
+				<div>Promociones</div>
+				<div>Tiendas</div>
+				<div>Prodcutos</div>
+			</nav>
 		</>
 	);
 };
