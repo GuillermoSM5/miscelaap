@@ -6,7 +6,7 @@ import CarruselGrid from '../../components/CarruselGrid/CarruselGrid';
 const Home = () => {
 	return (
 		<>
-			<Carrusel />
+			{/* <Carrusel /> */}
 			<Busqueda />
 			<div className='saludo'>
 				<h2 className='saludo-pregunta'>¿Que te traigo de la tienda?</h2>

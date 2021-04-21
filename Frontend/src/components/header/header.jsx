@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import './Header.scss';
 import MenuH from '../../assets/Menu.svg';
 import Shopping from '../../assets/Shopping.svg';
-import { Link as div } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Close from '../../assets/Close.svg';
 import DefaulUser from '../../assets/default-user.png';
 
 const Header = () => {
-	const [menuActive, setMenuActive] = useState(true);
+	const [menuActive, setMenuActive] = useState(false);
 	const sideMenu = () => {
 		setMenuActive(!menuActive);
 		console.log(menuActive);
@@ -45,11 +45,27 @@ const Header = () => {
 						<img src={DefaulUser} alt='' />
 						<p>Mi cuenta</p>
 					</div>
+					<div className='nav-menu__account-links'>
+						<Link onClick={sideMenu} to='/log-in'>
+							Ingresar
+						</Link>
+						<Link onClick={sideMenu} to='/sign-up'>
+							Registrarse
+						</Link>
+					</div>
 				</div>
-				<div>Novedades</div>
-				<div>Promociones</div>
-				<div>Tiendas</div>
-				<div>Prodcutos</div>
+				<Link to='#' className='nav-menu__links'>
+					Novedades
+				</Link>
+				<Link to='#' className='nav-menu__links'>
+					Promociones
+				</Link>
+				<Link to='#' className='nav-menu__links'>
+					Tiendas
+				</Link>
+				<Link to='#' className='nav-menu__links'>
+					Prodcutos
+				</Link>
 			</nav>
 		</>
 	);
