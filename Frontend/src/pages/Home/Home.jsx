@@ -1,5 +1,5 @@
 import React from 'react';
-import Carrusel from '../../components/Carrusel/Carrusel';
+//import Carrusel from '../../components/Carrusel/Carrusel';
 import Busqueda from '../../components/Busqueda/Busqueda';
 import CarruselGrid from '../../components/CarruselGrid/CarruselGrid';
 

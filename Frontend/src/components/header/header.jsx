@@ -49,7 +49,7 @@ const Header = () => {
 						<Link onClick={sideMenu} to='/log-in'>
 							Ingresar
 						</Link>
-						<Link onClick={sideMenu} to='/sign-up'>
+						<Link onClick={sideMenu} to='/new-user'>
 							Registrarse
 						</Link>
 					</div>
