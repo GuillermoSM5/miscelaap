@@ -1,0 +1,26 @@
+.newUser {
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.newUser__content {
+		margin: 7.3rem 0;
+		.newUser__content-title {
+			font-style: italic;
+			text-align: center;
+		}
+		.newUser__content-login {
+			display: flex;
+			padding: 2rem 0;
+			.login__paragraph {
+				margin: 0;
+				font-size: 0.75rem;
+			}
+			.login__link {
+				font-size: 0.75rem;
+				color: inherit;
+				margin: auto;
+			}
+		}
+	}
+}
